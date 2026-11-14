@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Услуги Автотранс: автодоставка, экспресс-доставка, переезды, сборные и негабаритные грузы, страхование и ответственное хранение.">
+  <title>Услуги — Автотранс</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/logo/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+  <meta name="theme-color" content="#2A2F41">
+</head>
+<body>
+
+<header class="header" id="header">
+    <div class="header__container">
+      <a href="index.html" class="header__logo" aria-label="Автотранс — на главную">
+        <img src="assets/logo/autotrans-mark-light.png" alt="" class="header__logo-icon" width="52" height="32">
+        <div class="header__logo-text">
+          <span class="header__logo-name">АВТОТРАНС</span>
+          <span class="header__logo-slogan">Грузоперевозки</span>
+        </div>
+      </a>
+      <nav class="header__nav" aria-label="Основная навигация">
+        <ul class="header__nav-list">
+          <li><a href="index.html" class="header__nav-link">Главная</a></li>
+          <li><a href="about.html" class="header__nav-link">О компании</a></li>
+          <li><a href="services.html" class="header__nav-link header__nav-link--active">Услуги</a></li>
+          <li><a href="news.html" class="header__nav-link">Новости</a></li>
+          <li><a href="contacts.html" class="header__nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="login-register.html" class="header__btn-cabinet">Личный кабинет</a>
+        <a href="tel:88005553535" class="header__phone">8 (800) 555-35-35</a>
+      </div>
+      <button class="header__burger" id="headerBurger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="header__mobile-menu" id="mobileMenu" role="dialog" aria-label="Мобильное меню">
+      <nav aria-label="Мобильная навигация">
+        <ul class="header__nav-list">
+          <li><a href="index.html" class="header__nav-link">Главная</a></li>
+          <li><a href="about.html" class="header__nav-link">О компании</a></li>
+          <li><a href="services.html" class="header__nav-link header__nav-link--active">Услуги</a></li>
+          <li><a href="news.html" class="header__nav-link">Новости</a></li>
+          <li><a href="contacts.html" class="header__nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__mobile-bottom">
+        <a href="login-register.html" class="header__btn-cabinet">Личный кабинет</a>
+        <a href="tel:88005553535" class="header__phone">8 (800) 555-35-35</a>
+      </div>
+    </div>
+  </header>
+
+<!-- Icons: Lucide (https://lucide.dev), ISC License -->
+<section class="srv-page" aria-labelledby="srvTitle">
+  <div class="srv-page__container">
+
+    <h1 class="srv-page__title reveal" id="srvTitle">Услуги</h1>
+
+    
+    <div class="srv-main-grid reveal">
+
+      <a href="service-detail.html?s=avtodostavka" class="srv-main-card">
+        <div class="srv-main-card__icon-wrap">
+          <svg class="srv-icon" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/>
+          </svg>
+        </div>
+        <span class="srv-main-card__name">Автодоставка</span>
+      </a>
+
+      <a href="service-detail.html?s=pereezd" class="srv-main-card">
+        <div class="srv-main-card__icon-wrap">
+          <svg class="srv-icon" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"/><path d="M2 16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z"/><path d="M4 18v2"/><path d="M20 18v2"/><path d="M12 4v9"/>
+          </svg>
+        </div>
+        <span class="srv-main-card__name">Переезд</span>
+      </a>
+
+      <a href="service-detail.html?s=banderolka" class="srv-main-card">
+        <div class="srv-main-card__icon-wrap">
+          <svg class="srv-icon" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/>
+          </svg>
+        </div>
+        <span class="srv-main-card__name">Бандероль</span>
+      </a>
+
+      <a href="service-detail.html?s=express" class="srv-main-card">
+        <div class="srv-main-card__icon-wrap">
+          <svg class="srv-icon" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"/>
+          </svg>
+        </div>
+        <span class="srv-main-card__name">Экспресс-доставка</span>
+      </a>
+
+    </div>
+
+    
+    <div class="srv-tags reveal">
+      <a href="service-detail.html?s=refrigerator" class="srv-tag">Доставка с рефрижератором</a>
+      <a href="service-detail.html?s=near-east" class="srv-tag">Доставка в страны Ближнего Востока</a>
+      <a href="service-detail.html?s=sborniy" class="srv-tag">Доставка сборных грузов</a>
+      <a href="service-detail.html?s=rezhim" class="srv-tag">Доставка режимных грузов</a>
+      <a href="service-detail.html?s=russia" class="srv-tag">Доставка по России</a>
+      <a href="service-detail.html?s=sosednie" class="srv-tag">Доставка в соседние страны</a>
+      <a href="service-detail.html?s=sng" class="srv-tag">Доставка в страны СНГ</a>
+      <a href="service-detail.html?s=far-east" class="srv-tag">Доставка в страны Дальнего Востока</a>
+      <a href="service-detail.html?s=new-regions" class="srv-tag">Доставка в новые регионы</a>
+      <a href="service-detail.html?s=europe" class="srv-tag">Доставка в европейские страны</a>
+      <a href="service-detail.html?s=krym" class="srv-tag">Доставка в Крым</a>
+      <a href="service-detail.html?s=oversized" class="srv-tag">Перевозка крупногабаритных грузов</a>
+      <a href="service-detail.html?s=hazmat" class="srv-tag">Перевозка опасных грузов</a>
+      <a href="service-detail.html?s=storage" class="srv-tag">Ответственное хранение</a>
+      <a href="service-detail.html?s=insurance" class="srv-tag">Страхование груза</a>
+      <a href="service-detail.html?s=door" class="srv-tag">Доставка до двери</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="fleet" aria-labelledby="fleetTitle">
+    <div class="fleet__container">
+      <h2 class="fleet__title reveal" id="fleetTitle">Наш автопарк</h2>
+
+      <div class="fleet__grid">
+
+        
+        <article class="fleet__card reveal reveal-d1">
+          <div class="fleet__card-img-wrap">
+            <img
+              src="assets/photos/fleet-mercedes.jpg"
+              alt="Фура Mercedes Actros 1851"
+              class="fleet__card-img"
+              width="400" height="250"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+          <div class="fleet__card-body">
+            <h3 class="fleet__card-title">Фура Mercedes Actros 1851</h3>
+            <p class="fleet__card-specs">20&nbsp;т, 82&nbsp;м³, магистрали</p>
+          </div>
+        </article>
+
+        
+        <article class="fleet__card reveal reveal-d2">
+          <div class="fleet__card-img-wrap">
+            <img
+              src="assets/photos/fleet-volvo.jpg"
+              alt="Фура Volvo FH 500"
+              class="fleet__card-img"
+              width="400" height="250"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+          <div class="fleet__card-body">
+            <h3 class="fleet__card-title">Фура Volvo FH 500</h3>
+            <p class="fleet__card-specs">20&nbsp;т, 92&nbsp;м³, дальние рейсы</p>
+          </div>
+        </article>
+
+        
+        <article class="fleet__card reveal reveal-d3">
+          <div class="fleet__card-img-wrap">
+            <img
+              src="assets/photos/fleet-man.jpg"
+              alt="Тягач MAN TGX 26.440"
+              class="fleet__card-img"
+              width="400" height="250"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+          <div class="fleet__card-body">
+            <h3 class="fleet__card-title">Тягач MAN TGX 26.440</h3>
+            <p class="fleet__card-specs">20&nbsp;т, 82&nbsp;м³, мультимодальные</p>
+          </div>
+        </article>
+
+        
+        <article class="fleet__card reveal reveal-d4">
+          <div class="fleet__card-img-wrap">
+            <img
+              src="assets/photos/fleet-scania.jpg"
+              alt="Фура Scania R 560"
+              class="fleet__card-img"
+              width="400" height="250"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+          <div class="fleet__card-body">
+            <h3 class="fleet__card-title">Фура Scania R&nbsp;560</h3>
+            <p class="fleet__card-specs">22&nbsp;т, 90&nbsp;м³, магистрали</p>
+          </div>
+        </article>
+
+      </div>
+
+      
+      <div class="fleet__desc reveal">
+        <p>Мы гордимся своим большим парком специализированной техники, которая идеально подходит для работы в различных климатических и дорожных условиях Самарской области и соседних регионов.</p>
+        <p>Наши автомобили соответствуют всем необходимым стандартам проходимости и надёжности, что позволяет нам обеспечивать своевременную и качественную доставку грузов в любую точку маршрута.</p>
+        <p>Преимущества сотрудничества с нами:</p>
+        <ul>
+          <li><strong>Опыт:</strong> За плечами нашей команды — многолетний опыт работы в сфере грузоперевозок по Самарской области и регионам России.</li>
+          <li><strong>Профессионализм:</strong> Все наши водители и специалисты обладают высокой квалификацией и знают особенности работы в каждом из регионов.</li>
+          <li><strong>Надёжность:</strong> Мы гарантируем безопасность вашего груза на всех этапах транспортировки.</li>
+          <li><strong>Индивидуальный подход:</strong> Каждый клиент получает персональное внимание и решения, адаптированные под конкретные потребности бизнеса.</li>
+        </ul>
+        <p>Доверяя свою логистику транспортной компании Автотранс, вы можете быть уверены, что ваш груз будет доставлен вовремя и в целости, независимо от сложности маршрута и погодных условий.</p>
+      </div>
+
+      
+      <div class="fleet__cta reveal">
+        <button class="fleet__btn" id="openModal" type="button">Оставить заявку</button>
+      </div>
+
+    </div>
+  </section>
+
+<section class="reviews" aria-labelledby="reviewsTitleSrv">
+  <div class="reviews__container">
+    <h2 class="reviews__title reveal" id="reviewsTitleSrv">Отзывы клиентов</h2>
+    <div class="reviews__header reveal">
+      <div class="reviews__meta">
+        <a href="https://2gis.ru/tolyatti/search/Автотранс" target="_blank" rel="noopener noreferrer" class="reviews__badge" aria-label="2ГИС 5.0">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><rect width="22" height="22" rx="5" fill="#1FA85C"/><text x="4" y="15" font-size="10" font-weight="800" fill="white" font-family="sans-serif">2Г</text></svg>
+          <span>2ГИС</span><span class="reviews__badge-score">5.0</span>
+        </a>
+        <a href="https://www.google.com/maps/search/Автотранс+Тольятти" target="_blank" rel="noopener noreferrer" class="reviews__badge" aria-label="Google Maps 5.0">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 1C6.68 1 4 3.68 4 7c0 4.5 6 12 6 12s6-7.5 6-12c0-3.32-2.68-6-6-6z" fill="#EA4335"/><circle cx="10" cy="7" r="2.5" fill="white"/></svg>
+          <span>Google Maps</span><span class="reviews__badge-score">5.0</span>
+        </a>
+        <a href="https://yandex.ru/maps/?text=Автотранс%20Тольятти" target="_blank" rel="noopener noreferrer" class="reviews__badge" aria-label="Яндекс Карты 5.0">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 1C6.68 1 4 3.68 4 7c0 4.5 6 12 6 12s6-7.5 6-12c0-3.32-2.68-6-6-6z" fill="#FC3F1D"/><circle cx="10" cy="7" r="2.5" fill="white"/></svg>
+          <span>Яндекс Карты</span><span class="reviews__badge-score">5.0</span>
+        </a>
+      </div>
+      <div class="reviews__leave-wrap">
+        <button class="reviews__leave-btn" id="leaveReviewBtn" type="button">Оставить отзыв ▾</button>
+        <div class="reviews__dropdown" id="leaveReviewDropdown" role="menu">
+          <a href="https://yandex.ru/maps/?text=Автотранс%20Тольятти" target="_blank" rel="noopener noreferrer" role="menuitem">
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M10 1C6.68 1 4 3.68 4 7c0 4.5 6 12 6 12s6-7.5 6-12c0-3.32-2.68-6-6-6z" fill="#EA4335"/><circle cx="10" cy="7" r="2.5" fill="white"/></svg>Google Maps
+          </a>
+          <a href="https://2gis.ru/tolyatti/search/Автотранс" target="_blank" rel="noopener noreferrer" role="menuitem">
+            <svg width="18" height="18" viewBox="0 0 22 22" fill="none"><rect width="22" height="22" rx="5" fill="#1FA85C"/><text x="4" y="15" font-size="10" font-weight="800" fill="white" font-family="sans-serif">2Г</text></svg>2ГИС
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="reviews__slider reveal" id="reviewsSlider">
+      <div class="reviews__track" id="reviewsTrack">
+        <article class="review-card">
+          <div class="review-card__head">
+            <img src="assets/photos/avatar-alexey.jpg" alt="" class="review-card__avatar" width="52" height="52" loading="lazy"/>
+            <div class="review-card__info">
+              <div class="review-card__name">Вольфович Жириновский</div>
+              <div class="review-card__role">Руководитель компании "АВТОВАЗ"</div>
+            </div>
+          </div>
+          <p class="review-card__text">Великолепное обслуживание, приветливый персонал, никакого времени ожидания. Рекомендую данную транспортную компанию!!!</p>
+          <div class="review-card__stars" aria-label="Оценка 5 из 5"><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span></div>
+        </article>
+        <article class="review-card">
+          <div class="review-card__head">
+            <img src="assets/photos/avatar-marina.jpg" alt="" class="review-card__avatar" width="52" height="52" loading="lazy"/>
+            <div class="review-card__info">
+              <div class="review-card__name">Алексей Морозов</div>
+              <div class="review-card__role">Постоянный клиент</div>
+            </div>
+          </div>
+          <p class="review-card__text">Отличная транспортная компания! Быстро согласовали маршрут, цена адекватная. Водители вежливые и пунктуальные.</p>
+          <div class="review-card__stars" aria-label="Оценка 5 из 5"><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span></div>
+        </article>
+        <article class="review-card">
+          <div class="review-card__head">
+            <img src="assets/photos/avatar-dmitry.jpg" alt="" class="review-card__avatar" width="52" height="52" loading="lazy"/>
+            <div class="review-card__info">
+              <div class="review-card__name">Сергей Коваленко</div>
+              <div class="review-card__role">Самара — Оренбург</div>
+            </div>
+          </div>
+          <p class="review-card__text">Перевозили стройматериалы из Самары в Оренбург. Всё прошло без нареканий — груз доставлен в срок.</p>
+          <div class="review-card__stars" aria-label="Оценка 5 из 5"><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span></div>
+        </article>
+        <article class="review-card">
+          <div class="review-card__head">
+            <img src="assets/photos/avatar-natalya.jpg" alt="" class="review-card__avatar" width="52" height="52" loading="lazy"/>
+            <div class="review-card__info">
+              <div class="review-card__name">Ирина Павлова</div>
+              <div class="review-card__role">Клиент</div>
+            </div>
+          </div>
+          <p class="review-card__text">Сотрудничаем с Автотранс уже полгода. Стабильно, надёжно. Особенно ценю онлайн-трекинг груза.</p>
+          <div class="review-card__stars" aria-label="Оценка 5 из 5"><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span></div>
+        </article>
+        <article class="review-card">
+          <div class="review-card__head">
+            <img src="assets/photos/avatar-sergey.jpg" alt="" class="review-card__avatar" width="52" height="52" loading="lazy"/>
+            <div class="review-card__info">
+              <div class="review-card__name">Дмитрий Фёдоров</div>
+              <div class="review-card__role">Партнёр</div>
+            </div>
+          </div>
+          <p class="review-card__text">Перевозили партию автозапчастей. Всё закрепили и доставили в идеальном состоянии. Профессиональная команда!</p>
+          <div class="review-card__stars" aria-label="Оценка 5 из 5"><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span></div>
+        </article>
+        <article class="review-card">
+          <div class="review-card__head">
+            <img src="assets/photos/avatar-elena.jpg" alt="" class="review-card__avatar" width="52" height="52" loading="lazy"/>
+            <div class="review-card__info">
+              <div class="review-card__name">Наталья Смирнова</div>
+              <div class="review-card__role">Клиент</div>
+            </div>
+          </div>
+          <p class="review-card__text">Работаем с Автотранс уже 3 года. Ни одной задержки, груз всегда приходит в целости.</p>
+          <div class="review-card__stars" aria-label="Оценка 5 из 5"><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span></div>
+        </article>
+      </div>
+    </div>
+    <div class="reviews__nav reveal">
+      <button class="reviews__arrow" id="reviewsPrev" aria-label="Предыдущий"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="reviews__dots" role="tablist">
+        <button class="reviews__dot is-active" data-index="0" aria-label="Слайд 1"></button>
+        <button class="reviews__dot" data-index="1" aria-label="Слайд 2"></button>
+        <button class="reviews__dot" data-index="2" aria-label="Слайд 3"></button>
+        <button class="reviews__dot" data-index="3" aria-label="Слайд 4"></button>
+        <button class="reviews__dot" data-index="4" aria-label="Слайд 5"></button>
+        <button class="reviews__dot" data-index="5" aria-label="Слайд 6"></button>
+      </div>
+      <button class="reviews__arrow" id="reviewsNext" aria-label="Следующий"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<section class="cta-contact" aria-labelledby="ctaTitleSrv">
+  <div class="cta-contact__inner reveal">
+    <h2 class="cta-contact__heading" id="ctaTitleSrv">Остались<br>вопросы?</h2>
+    <div class="cta-contact__phone-block">
+      <a href="tel:88005553535" class="cta-contact__phone">8 (800) 555-35-35</a>
+      <p class="cta-contact__sub">Наши специалисты свяжутся с вами<br>в течение 15 минут</p>
+    </div>
+    <button class="cta-contact__btn" id="openModalCta" type="button">Оставить заявку</button>
+    <svg class="cta-contact__icon" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/>
+        <path d="M21 16v2a4 4 0 0 1-4 4h-5"/>
+      </svg>
+  </div>
+</section>
+
+<footer class="footer" aria-label="Подвал сайта">
+  <div class="footer__container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="Автотранс — на главную">
+          <img src="assets/logo/autotrans-mark-light.png" alt="" class="footer__logo-icon" width="48" height="30">
+          <span class="footer__logo-name">АВТОТРАНС</span>
+        </a>
+        <p class="footer__desc">Транспортно-экспедиционная компания. Круглогодичная доставка грузов по Самарской области и регионам России с 2010 года.</p>
+      </div>
+      <div>
+        <p class="footer__col-title">Навигация</p>
+        <nav class="footer__links" aria-label="Навигация в подвале">
+          <a href="index.html" class="footer__link">Главная</a>
+          <a href="about.html" class="footer__link">О компании</a>
+          <a href="services.html" class="footer__link">Услуги</a>
+          <a href="calculator.html" class="footer__link">Калькулятор</a>
+          <a href="news.html" class="footer__link">Новости</a>
+          <a href="contacts.html" class="footer__link">Контакты</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer__col-title">Услуги</p>
+        <nav class="footer__links" aria-label="Услуги в подвале">
+          <a href="service-detail.html?s=avtodostavka" class="footer__link">Автодоставка</a>
+          <a href="service-detail.html?s=express" class="footer__link">Экспресс-доставка</a>
+          <a href="service-detail.html?s=door" class="footer__link">Доставка до двери</a>
+          <a href="service-detail.html?s=insurance" class="footer__link">Страхование груза</a>
+          <a href="service-detail.html?s=sborniy" class="footer__link">Сборные грузы</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer__col-title">Контакты</p>
+        <a href="tel:88005553535" class="footer__contact-item">
+          <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.56-.56a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          8 (800) 555-35-35
+        </a>
+        <a href="mailto:info@avtotrans.ru" class="footer__contact-item">
+          <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@avtotrans.ru
+        </a>
+        <span class="footer__contact-item">
+          <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          г. Тольятти, Ленинский проспект, 40
+        </span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copy">© 2010–2026 ООО «Автотранс». Все права защищены.</span>
+      <a href="privacy.html" class="footer__policy">Политика конфиденциальности</a>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="requestModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal" id="modalBox">
+    <button class="modal__close" id="closeModal" aria-label="Закрыть">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 2L14 14M14 2L2 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <div id="modalFormWrap">
+      <h2 class="modal__title" id="modalTitle">Оставить заявку</h2>
+      <form class="modal__form" id="requestForm" novalidate>
+        <div class="modal__row">
+          <div class="modal__field"><label for="req-name">Имя</label><input type="text" id="req-name" name="name" placeholder="Ваше имя" autocomplete="name"/></div>
+          <div class="modal__field"><label for="req-phone">Телефон *</label><input type="tel" id="req-phone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" required/></div>
+        </div>
+        <div class="modal__row">
+          <div class="modal__field"><label for="req-from">Откуда</label><input type="text" id="req-from" name="from" placeholder="Город отправления"/></div>
+          <div class="modal__field"><label for="req-to">Куда</label><input type="text" id="req-to" name="to" placeholder="Город доставки"/></div>
+        </div>
+        <div class="modal__field"><label for="req-cargo">Груз</label><input type="text" id="req-cargo" name="cargo" placeholder="Описание, вес, габариты"/></div>
+        <div class="modal__field"><label for="req-comment">Комментарий</label><textarea id="req-comment" name="comment" rows="3" placeholder="Дополнительная информация..."></textarea></div>
+        <button type="submit" class="modal__submit">Отправить заявку</button>
+      </form>
+    </div>
+    <div class="modal__success" id="modalSuccess" aria-live="polite">
+      <div class="modal__success-icon">✓</div>
+      <h3>Заявка принята!</h3>
+      <p>Мы свяжемся с вами в течение 15 минут</p>
+    </div>
+  </div>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>

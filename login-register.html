@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Вход и регистрация в личном кабинете Автотранс для отслеживания грузов и управления заявками.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Автотранс — Вход и регистрация</title>
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/logo/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+  <meta name="theme-color" content="#2A2F41">
+</head>
+<body class="auth-page">
+  <header class="header" id="header">
+    <div class="header__container">
+      <a href="index.html" class="header__logo" aria-label="Автотранс — на главную">
+        <img src="assets/logo/autotrans-mark-light.png" alt="" class="header__logo-icon" width="52" height="32">
+        <div class="header__logo-text">
+          <span class="header__logo-name">АВТОТРАНС</span>
+          <span class="header__logo-slogan">Грузоперевозки</span>
+        </div>
+      </a>
+      <nav class="header__nav" aria-label="Основная навигация">
+        <ul class="header__nav-list">
+          <li><a href="index.html" class="header__nav-link">Главная</a></li>
+          <li><a href="about.html" class="header__nav-link">О компании</a></li>
+          <li><a href="services.html" class="header__nav-link">Услуги</a></li>
+          <li><a href="news.html" class="header__nav-link">Новости</a></li>
+          <li><a href="contacts.html" class="header__nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="login-register.html" class="header__btn-cabinet">Личный кабинет</a>
+        <a href="tel:88005553535" class="header__phone">8 (800) 555-35-35</a>
+      </div>
+      <button class="header__burger" id="headerBurger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="header__mobile-menu" id="mobileMenu" role="dialog" aria-label="Мобильное меню">
+      <nav aria-label="Мобильная навигация">
+        <ul class="header__nav-list">
+          <li><a href="index.html" class="header__nav-link">Главная</a></li>
+          <li><a href="about.html" class="header__nav-link">О компании</a></li>
+          <li><a href="services.html" class="header__nav-link">Услуги</a></li>
+          <li><a href="news.html" class="header__nav-link">Новости</a></li>
+          <li><a href="contacts.html" class="header__nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__mobile-bottom">
+        <a href="login-register.html" class="header__btn-cabinet">Личный кабинет</a>
+        <a href="tel:88005553535" class="header__phone">8 (800) 555-35-35</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero" aria-label="Вход и регистрация">
+      <div class="page-hero__container">
+        <span class="page-hero__eyebrow">Клиентский сервис Автотранс</span>
+        <h1 class="page-hero__title">Вход и регистрация в личный кабинет для отслеживания, заявок и шаблонов маршрутов</h1>
+        <p class="page-hero__text">На этой странице пользователь может войти в кабинет или сразу зарегистрироваться, чтобы хранить контакты, контролировать статусы отправлений и быстрее повторять типовые перевозки.</p>
+      </div>
+    </section>
+
+    <section class="auth-layout">
+      <div class="auth-benefits">
+        <h2 class="auth-benefits__title">Зачем нужен аккаунт</h2>
+        <p class="auth-benefits__text">Личный кабинет сохраняет историю отправок, упрощает повторные заявки и даёт быстрый доступ к отслеживанию груза по трек-номеру.</p>
+        <div class="auth-features">
+          <article class="auth-feature">
+            <div class="auth-feature__num">01</div>
+            <h3 class="auth-feature__title">Трекинг в пару кликов</h3>
+            <p>Проверяйте маршрут, текущий статус и ориентировочную дату прибытия без звонка менеджеру.</p>
+          </article>
+          <article class="auth-feature">
+            <div class="auth-feature__num">02</div>
+            <h3 class="auth-feature__title">История заявок</h3>
+            <p>Смотрите активные и завершённые перевозки, повторяйте типовые направления и сохраняйте параметры.</p>
+          </article>
+          <article class="auth-feature">
+            <div class="auth-feature__num">03</div>
+            <h3 class="auth-feature__title">Документы и контакты</h3>
+            <p>Храните реквизиты, основные данные отправителя и получателя в одном месте для быстрых расчётов.</p>
+          </article>
+          <article class="auth-feature">
+            <div class="auth-feature__num">04</div>
+            <h3 class="auth-feature__title">Уведомления</h3>
+            <p>Получайте сообщения о приёмке, выезде, прибытии на терминал и завершении доставки.</p>
+          </article>
+        </div>
+      </div>
+
+      <section class="auth-panel" aria-label="Формы входа и регистрации">
+        <h2 class="auth-panel__title">Доступ в кабинет</h2>
+        <p class="auth-panel__text">Переключайтесь между входом и регистрацией без перехода на другую страницу.</p>
+
+        <div class="auth-switch" role="tablist" aria-label="Формы доступа">
+          <button class="auth-switch__btn is-active" type="button" data-auth-tab="login" role="tab" aria-selected="true">Вход</button>
+          <button class="auth-switch__btn" type="button" data-auth-tab="register" role="tab" aria-selected="false">Регистрация</button>
+        </div>
+
+        <form class="auth-form is-active" id="loginForm" data-auth-panel="login" novalidate>
+          <div class="form-field">
+            <label class="form-label" for="loginEmail">E-mail или телефон</label>
+            <input class="form-input" id="loginEmail" type="text" placeholder="example@mail.ru или +7 (900) 000-00-00">
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="loginPassword">Пароль</label>
+            <input class="form-input" id="loginPassword" type="password" placeholder="Введите пароль">
+          </div>
+          <div class="form-row-between">
+            <label class="form-check"><input type="checkbox" checked> <span>Запомнить меня на этом устройстве</span></label>
+            <a class="link-inline" href="mailto:info@avtotrans.ru?subject=%D0%92%D0%BE%D1%81%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%B0%20%D0%BA%20%D0%BB%D0%B8%D1%87%D0%BD%D0%BE%D0%BC%D1%83%20%D0%BA%D0%B0%D0%B1%D0%B8%D0%BD%D0%B5%D1%82%D1%83">Восстановить доступ</a>
+          </div>
+          <button class="btn-red" type="submit">Войти в кабинет</button>
+          
+        </form>
+
+        <form class="auth-form" id="registerForm" data-auth-panel="register" novalidate>
+          <div class="form-grid">
+            <div class="form-field">
+              <label class="form-label" for="clientType">Тип клиента</label>
+              <select class="form-select" id="clientType">
+                <option>Физическое лицо</option>
+                <option>Юридическое лицо</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="userName">Имя или компания</label>
+              <input class="form-input" id="userName" type="text" placeholder="ООО АвтоСнаб / Иван Петров">
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="userPhone">Телефон</label>
+              <input class="form-input" id="userPhone" type="tel" placeholder="+7 (900) 000-00-00">
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="userEmail">E-mail</label>
+              <input class="form-input" id="userEmail" type="email" placeholder="mail@example.ru">
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="passwordReg">Пароль</label>
+              <input class="form-input" id="passwordReg" type="password" placeholder="Не менее 8 символов">
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="passwordReg2">Повтор пароля</label>
+              <input class="form-input" id="passwordReg2" type="password" placeholder="Повторите пароль">
+            </div>
+            <div class="form-field full">
+              <label class="form-label" for="userComment">Комментарий</label>
+              <input class="form-input" id="userComment" type="text" placeholder="Например: интересуют регулярные отправки Самара — Казань">
+            </div>
+          </div>
+          <label class="form-check"><input type="checkbox" checked> <span>Соглашаюсь на обработку персональных данных и получение уведомлений о статусе перевозки</span></label>
+          <button class="btn-red" type="submit">Создать аккаунт</button>
+          
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer" aria-label="Подвал сайта">
+  <div class="footer__container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="Автотранс — на главную">
+          <img src="assets/logo/autotrans-mark-light.png" alt="" class="footer__logo-icon" width="48" height="30">
+          <span class="footer__logo-name">АВТОТРАНС</span>
+        </a>
+        <p class="footer__desc">Транспортно-экспедиционная компания. Круглогодичная доставка грузов по Самарской области и регионам России с 2010 года.</p>
+      </div>
+      <div>
+        <p class="footer__col-title">Навигация</p>
+        <nav class="footer__links" aria-label="Навигация в подвале">
+          <a href="index.html" class="footer__link">Главная</a>
+          <a href="about.html" class="footer__link">О компании</a>
+          <a href="services.html" class="footer__link">Услуги</a>
+          <a href="calculator.html" class="footer__link">Калькулятор</a>
+          <a href="news.html" class="footer__link">Новости</a>
+          <a href="contacts.html" class="footer__link">Контакты</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer__col-title">Услуги</p>
+        <nav class="footer__links" aria-label="Услуги в подвале">
+          <a href="service-detail.html?s=avtodostavka" class="footer__link">Автодоставка</a>
+          <a href="service-detail.html?s=express" class="footer__link">Экспресс-доставка</a>
+          <a href="service-detail.html?s=door" class="footer__link">Доставка до двери</a>
+          <a href="service-detail.html?s=insurance" class="footer__link">Страхование груза</a>
+          <a href="service-detail.html?s=sborniy" class="footer__link">Сборные грузы</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer__col-title">Контакты</p>
+        <a href="tel:88005553535" class="footer__contact-item">
+          <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.56-.56a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          8 (800) 555-35-35
+        </a>
+        <a href="mailto:info@avtotrans.ru" class="footer__contact-item">
+          <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@avtotrans.ru
+        </a>
+        <span class="footer__contact-item">
+          <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          г. Тольятти, Ленинский проспект, 40
+        </span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copy">© 2010–2026 ООО «Автотранс». Все права защищены.</span>
+      <a href="privacy.html" class="footer__policy">Политика конфиденциальности</a>
+    </div>
+  </div>
+</footer>
+
+  
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      const tabs = Array.from(document.querySelectorAll('[data-auth-tab]'));
+      const panels = Array.from(document.querySelectorAll('[data-auth-panel]'));
+      function activate(tabName) {
+        tabs.forEach(btn => {
+          const active = btn.dataset.authTab === tabName;
+          btn.classList.toggle('is-active', active);
+          btn.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
+        panels.forEach(panel => panel.classList.toggle('is-active', panel.dataset.authPanel === tabName));
+      }
+      tabs.forEach(btn => btn.addEventListener('click', () => activate(btn.dataset.authTab)));
+      ['loginForm', 'registerForm'].forEach(id => {
+        const form = document.getElementById(id);
+        if (!form) return;
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          window.location.href = 'account.html';
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Автотранс — грузоперевозки по Самарской области и Поволжью: собственный автопарк, онлайн-расчёт стоимости, доставка от одного дня.">
+  <title>Автотранс — Доставка грузов по Самарской области</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/logo/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+  <meta name="theme-color" content="#2A2F41">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header__container">
+      <a href="index.html" class="header__logo" aria-label="Автотранс — на главную">
+        <img src="assets/logo/autotrans-mark-light.png" alt="" class="header__logo-icon" width="52" height="32">
+        <div class="header__logo-text">
+          <span class="header__logo-name">АВТОТРАНС</span>
+          <span class="header__logo-slogan">Грузоперевозки</span>
+        </div>
+      </a>
+      <nav class="header__nav" aria-label="Основная навигация">
+        <ul class="header__nav-list">
+          <li><a href="index.html" class="header__nav-link header__nav-link--active">Главная</a></li>
+          <li><a href="about.html" class="header__nav-link">О компании</a></li>
+          <li><a href="services.html" class="header__nav-link">Услуги</a></li>
+          <li><a href="news.html" class="header__nav-link">Новости</a></li>
+          <li><a href="contacts.html" class="header__nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="login-register.html" class="header__btn-cabinet">Личный кабинет</a>
+        <a href="tel:88005553535" class="header__phone">8 (800) 555-35-35</a>
+      </div>
+      <button class="header__burger" id="headerBurger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="header__mobile-menu" id="mobileMenu" role="dialog" aria-label="Мобильное меню">
+      <nav aria-label="Мобильная навигация">
+        <ul class="header__nav-list">
+          <li><a href="index.html" class="header__nav-link header__nav-link--active">Главная</a></li>
+          <li><a href="about.html" class="header__nav-link">О компании</a></li>
+          <li><a href="services.html" class="header__nav-link">Услуги</a></li>
+          <li><a href="news.html" class="header__nav-link">Новости</a></li>
+          <li><a href="contacts.html" class="header__nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__mobile-bottom">
+        <a href="login-register.html" class="header__btn-cabinet">Личный кабинет</a>
+        <a href="tel:88005553535" class="header__phone">8 (800) 555-35-35</a>
+      </div>
+    </div>
+  </header>
+
+  
+  <section class="hero" aria-label="Главный экран">
+    <div class="hero__overlay" aria-hidden="true"></div>
+
+    <div class="hero__container">
+      <div class="hero__content">
+
+        
+        <h1 class="hero__title">
+          Круглогодичная доставка грузов по Самарской области и регионам
+        </h1>
+
+        
+        <ul class="hero__features">
+          <li class="hero__feature">
+            <span class="hero__feature-check" aria-hidden="true">✓</span>
+            <span>Калькулятор стоимости</span>
+          </li>
+          <li class="hero__feature">
+            <span class="hero__feature-check" aria-hidden="true">✓</span>
+            <span>Собственный автопарк 200+ ТС</span>
+          </li>
+          <li class="hero__feature">
+            <span class="hero__feature-check" aria-hidden="true">✓</span>
+            <span>Надежность и страховка груза</span>
+          </li>
+        </ul>
+
+      </div>
+
+      
+      <div class="hero__calc-wrap">
+        <form class="hero__calc" id="calcForm" novalidate>
+
+          
+          <div class="hero__calc-field">
+            <label class="hero__calc-label" for="cityFrom">Откуда</label>
+            <select class="hero__calc-select" id="cityFrom" name="from" aria-label="Город отправления">
+              <option value="" disabled selected>Выберите город</option>
+              <optgroup label="— Самарская область —">
+                <option value="Самара">Самара</option>
+                <option value="Тольятти">Тольятти</option>
+                <option value="Сызрань">Сызрань</option>
+                <option value="Новокуйбышевск">Новокуйбышевск</option>
+                <option value="Чапаевск">Чапаевск</option>
+                <option value="Жигулёвск">Жигулёвск</option>
+                <option value="Отрадный">Отрадный</option>
+                <option value="Кинель">Кинель</option>
+                <option value="Похвистнево">Похвистнево</option>
+                <option value="Нефтегорск">Нефтегорск</option>
+                <option value="Октябрьск">Октябрьск</option>
+                <option value="Кинель-Черкассы">Кинель-Черкассы</option>
+                <option value="Безенчук">Безенчук</option>
+                <option value="Богатое">Богатое</option>
+                <option value="Борское">Борское</option>
+                <option value="Большая Глушица">Большая Глушица</option>
+                <option value="Исаклы">Исаклы</option>
+              </optgroup>
+              <optgroup label="— Ульяновская область —">
+                <option value="Ульяновск">Ульяновск</option>
+                <option value="Димитровград">Димитровград</option>
+                <option value="Инза">Инза</option>
+                <option value="Барыш">Барыш</option>
+                <option value="Сенгилей">Сенгилей</option>
+              </optgroup>
+              <optgroup label="— Саратовская область —">
+                <option value="Саратов">Саратов</option>
+                <option value="Энгельс">Энгельс</option>
+                <option value="Балаково">Балаково</option>
+                <option value="Вольск">Вольск</option>
+                <option value="Пугачёв">Пугачёв</option>
+                <option value="Маркс">Маркс</option>
+              </optgroup>
+              <optgroup label="— Оренбургская область —">
+                <option value="Оренбург">Оренбург</option>
+                <option value="Орск">Орск</option>
+                <option value="Новотроицк">Новотроицк</option>
+                <option value="Бузулук">Бузулук</option>
+                <option value="Бугуруслан">Бугуруслан</option>
+              </optgroup>
+              <optgroup label="— Республика Татарстан —">
+                <option value="Казань">Казань</option>
+                <option value="Набережные Челны">Набережные Челны</option>
+                <option value="Альметьевск">Альметьевск</option>
+                <option value="Нижнекамск">Нижнекамск</option>
+                <option value="Чистополь">Чистополь</option>
+                <option value="Бугульма">Бугульма</option>
+                <option value="Елабуга">Елабуга</option>
+                <option value="Лениногорск">Лениногорск</option>
+              </optgroup>
+              <optgroup label="— Республика Башкортостан —">
+                <option value="Уфа">Уфа</option>
+                <option value="Стерлитамак">Стерлитамак</option>
+                <option value="Салават">Салават</option>
+                <option value="Нефтекамск">Нефтекамск</option>
+                <option value="Октябрьский">Октябрьский</option>
+                <option value="Белебей">Белебей</option>
+              </optgroup>
+              <optgroup label="— Пензенская область —">
+                <option value="Пенза">Пенза</option>
+                <option value="Кузнецк">Кузнецк</option>
+                <option value="Заречный">Заречный</option>
+                <option value="Нижний Ломов">Нижний Ломов</option>
+              </optgroup>
+              <optgroup label="— Республика Мордовия —">
+                <option value="Саранск">Саранск</option>
+                <option value="Рузаевка">Рузаевка</option>
+                <option value="Ковылкино">Ковылкино</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="hero__calc-sep" aria-hidden="true"></div>
+
+          
+          <div class="hero__calc-swap-wrap">
+            <button type="button" class="hero__calc-swap" id="swapCities" aria-label="Поменять города местами">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 16V4m0 0L3 8m4-4l4 4"/>
+                <path d="M17 8v12m0 0l4-4m-4 4l-4-4"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="hero__calc-sep" aria-hidden="true"></div>
+
+          
+          <div class="hero__calc-field">
+            <label class="hero__calc-label" for="cityTo">Куда</label>
+            <select class="hero__calc-select" id="cityTo" name="to" aria-label="Город назначения">
+              <option value="" disabled selected>Выберите город</option>
+              <optgroup label="— Самарская область —">
+                <option value="Самара">Самара</option>
+                <option value="Тольятти">Тольятти</option>
+                <option value="Сызрань">Сызрань</option>
+                <option value="Новокуйбышевск">Новокуйбышевск</option>
+                <option value="Чапаевск">Чапаевск</option>
+                <option value="Жигулёвск">Жигулёвск</option>
+                <option value="Отрадный">Отрадный</option>
+                <option value="Кинель">Кинель</option>
+                <option value="Похвистнево">Похвистнево</option>
+                <option value="Нефтегорск">Нефтегорск</option>
+                <option value="Октябрьск">Октябрьск</option>
+                <option value="Кинель-Черкассы">Кинель-Черкассы</option>
+                <option value="Безенчук">Безенчук</option>
+                <option value="Богатое">Богатое</option>
+                <option value="Борское">Борское</option>
+                <option value="Большая Глушица">Большая Глушица</option>
+                <option value="Исаклы">Исаклы</option>
+              </optgroup>
+              <optgroup label="— Ульяновская область —">
+                <option value="Ульяновск">Ульяновск</option>
+                <option value="Димитровград">Димитровград</option>
+                <option value="Инза">Инза</option>
+                <option value="Барыш">Барыш</option>
+                <option value="Сенгилей">Сенгилей</option>
+              </optgroup>
+              <optgroup label="— Саратовская область —">
+                <option value="Саратов">Саратов</option>
+                <option value="Энгельс">Энгельс</option>
+                <option value="Балаково">Балаково</option>
+                <option value="Вольск">Вольск</option>
+                <option value="Пугачёв">Пугачёв</option>
+                <option value="Маркс">Маркс</option>
+              </optgroup>
+              <optgroup label="— Оренбургская область —">
+                <option value="Оренбург">Оренбург</option>
+                <option value="Орск">Орск</option>
+                <option value="Новотроицк">Новотроицк</option>
+                <option value="Бузулук">Бузулук</option>
+                <option value="Бугуруслан">Бугуруслан</option>
+              </optgroup>
+              <optgroup label="— Республика Татарстан —">
+                <option value="Казань">Казань</option>
+                <option value="Набережные Челны">Набережные Челны</option>
+                <option value="Альметьевск">Альметьевск</option>
+                <option value="Нижнекамск">Нижнекамск</option>
+                <option value="Чистополь">Чистополь</option>
+                <option value="Бугульма">Бугульма</option>
+                <option value="Елабуга">Елабуга</option>
+                <option value="Лениногорск">Лениногорск</option>
+              </optgroup>
+              <optgroup label="— Республика Башкортостан —">
+                <option value="Уфа">Уфа</option>
+                <option value="Стерлитамак">Стерлитамак</option>
+                <option value="Салават">Салават</option>
+                <option value="Нефтекамск">Нефтекамск</option>
+                <option value="Октябрьский">Октябрьский</option>
+                <option value="Белебей">Белебей</option>
+              </optgroup>
+              <optgroup label="— Пензенская область —">
+                <option value="Пенза">Пенза</option>
+                <option value="Кузнецк">Кузнецк</option>
+                <option value="Заречный">Заречный</option>
+                <option value="Нижний Ломов">Нижний Ломов</option>
+              </optgroup>
+              <optgroup label="— Республика Мордовия —">
+                <option value="Саранск">Саранск</option>
+                <option value="Рузаевка">Рузаевка</option>
+                <option value="Ковылкино">Ковылкино</option>
+              </optgroup>
+            </select>
+          </div>
+
+          
+          <button type="submit" class="hero__calc-btn">Узнать стоимость</button>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+<!-- Icons: Lucide (https://lucide.dev), ISC License -->
+<main>
+  
+  <section class="fleet" aria-labelledby="fleetTitle">
+    <div class="fleet__container">
+      <h2 class="fleet__title reveal" id="fleetTitle">Наш автопарк</h2>
+
+      <div class="fleet__grid">
+
+        
+        <article class="fleet__card reveal reveal-d1">
+          <div class="fleet__card-img-wrap">
+            <img
+              src="assets/photos/fleet-mercedes.jpg"
+              alt="Фура Mercedes Actros 1851"
+              class="fleet__card-img"
+              width="400" height="250"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+          <div class="fleet__card-body">
+            <h3 class="fleet__card-title">Фура Mercedes Actros 1851</h3>
+            <p class="fleet__card-specs">20&nbsp;т, 82&nbsp;м³, магистрали</p>
+          </div>
+        </article>
+
+        
+        <article class="fleet__card reveal reveal-d2">
+          <div class="fleet__card-img-wrap">
+            <img
+              src="assets/photos/fleet-volvo.jpg"
+              alt="Фура Volvo FH 500"
+              class="fleet__card-img"
+              width="400" height="250"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+          <div class="fleet__card-body">
+            <h3 class="fleet__card-title">Фура Volvo FH 500</h3>
+            <p class="fleet__card-specs">20&nbsp;т, 92&nbsp;м³, дальние рейсы</p>
+          </div>
+        </article>
+
+        
+        <article class="fleet__card reveal reveal-d3">
+          <div class="fleet__card-img-wrap">
+            <img
+              src="assets/photos/fleet-man.jpg"
+              alt="Тягач MAN TGX 26.440"
+              class="fleet__card-img"
+              width="400" height="250"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+          <div class="fleet__card-body">
+            <h3 class="fleet__card-title">Тягач MAN TGX 26.440</h3>
+            <p class="fleet__card-specs">20&nbsp;т, 82&nbsp;м³, мультимодальные</p>
+          </div>
+        </article>
+
+        
+        <article class="fleet__card reveal reveal-d4">
+          <div class="fleet__card-img-wrap">
+            <img
+              src="assets/photos/fleet-scania.jpg"
+              alt="Фура Scania R 560"
+              class="fleet__card-img"
+              width="400" height="250"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+          <div class="fleet__card-body">
+            <h3 class="fleet__card-title">Фура Scania R&nbsp;560</h3>
+            <p class="fleet__card-specs">22&nbsp;т, 90&nbsp;м³, магистрали</p>
+          </div>
+        </article>
+
+      </div>
+
+      
+      <div class="fleet__desc reveal">
+        <p>Мы гордимся своим большим парком специализированной техники, которая идеально подходит для работы в различных климатических и дорожных условиях Самарской области и соседних регионов.</p>
+        <p>Наши автомобили соответствуют всем необходимым стандартам проходимости и надёжности, что позволяет нам обеспечивать своевременную и качественную доставку грузов в любую точку маршрута.</p>
+        <p>Преимущества сотрудничества с нами:</p>
+        <ul>
+          <li><strong>Опыт:</strong> За плечами нашей команды — многолетний опыт работы в сфере грузоперевозок по Самарской области и регионам России.</li>
+          <li><strong>Профессионализм:</strong> Все наши водители и специалисты обладают высокой квалификацией и знают особенности работы в каждом из регионов.</li>
+          <li><strong>Надёжность:</strong> Мы гарантируем безопасность вашего груза на всех этапах транспортировки.</li>
+          <li><strong>Индивидуальный подход:</strong> Каждый клиент получает персональное внимание и решения, адаптированные под конкретные потребности бизнеса.</li>
+        </ul>
+        <p>Доверяя свою логистику транспортной компании Автотранс, вы можете быть уверены, что ваш груз будет доставлен вовремя и в целости, независимо от сложности маршрута и погодных условий.</p>
+      </div>
+
+      
+      <div class="fleet__cta reveal">
+        <button class="fleet__btn" id="openModal" type="button">Оставить заявку</button>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <section class="why" aria-labelledby="whyTitle">
+    <div class="why__inner">
+      <h2 class="why__title reveal" id="whyTitle">Почему выбирают нас</h2>
+
+      <p class="why__text reveal reveal-d1">
+        Компания «Автотранс» — транспортно-экспедиционная компания, специализирующаяся на грузоперевозках по Самарской области и соседним регионам России. Наш автопарк насчитывает более 200 единиц техники, а география маршрутов охватывает Поволжье, Урал и центральную Россию.
+      </p>
+      <p class="why__text reveal reveal-d2">
+        Несмотря на масштаб и разнообразие направлений, компания успешно работает и с уверенностью можно сказать, что ТК «Автотранс» — надёжный эксперт в области перевозки грузов по региону, которому доверяют сотни предприятий и частных клиентов.
+      </p>
+
+      <div class="why__cards">
+
+        <div class="why__card reveal reveal-d1">
+          <svg class="why__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+          <span class="why__card-text">Бережно везём груз</span>
+        </div>
+
+        <div class="why__card reveal reveal-d2">
+          <svg class="why__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></svg>
+          <span class="why__card-text">Доставляем в короткие сроки</span>
+        </div>
+
+        <div class="why__card reveal reveal-d3">
+          <svg class="why__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></svg>
+          <span class="why__card-text">Оптимизируем затраты на логистику</span>
+        </div>
+
+        <div class="why__card reveal reveal-d4">
+          <svg class="why__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/><path d="M21 16v2a4 4 0 0 1-4 4h-5"/></svg>
+          <span class="why__card-text">Обеспечиваем высокий сервис</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+  
+  <section class="reviews" aria-labelledby="reviewsTitle">
+    <div class="reviews__container">
+
+      <h2 class="reviews__title reveal" id="reviewsTitle">Отзывы клиентов</h2>
+
+      <div class="reviews__header reveal">
+        
+        <div class="reviews__meta">
+          <a href="https://2gis.ru/tolyatti/search/Автотранс" target="_blank" rel="noopener noreferrer" class="reviews__badge" aria-label="2ГИС — рейтинг 5.0">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+              <rect width="22" height="22" rx="5" fill="#1FA85C"/>
+              <text x="4" y="15" font-size="10" font-weight="800" fill="white" font-family="sans-serif">2ГИС</text>
+            </svg>
+            <span>2ГИС</span>
+            <span class="reviews__badge-score">5.0</span>
+          </a>
+          <a href="https://www.google.com/maps/search/Автотранс+Тольятти" target="_blank" rel="noopener noreferrer" class="reviews__badge" aria-label="Google Maps — рейтинг 5.0">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M10 1C6.68 1 4 3.68 4 7c0 4.5 6 12 6 12s6-7.5 6-12c0-3.32-2.68-6-6-6z" fill="#EA4335"/>
+              <circle cx="10" cy="7" r="2.5" fill="white"/>
+            </svg>
+            <span>Google Maps</span>
+            <span class="reviews__badge-score">5.0</span>
+          </a>
+          <a href="https://yandex.ru/maps/?text=Автотранс%20Тольятти" target="_blank" rel="noopener noreferrer" class="reviews__badge" aria-label="Яндекс Карты — рейтинг 5.0">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M10 1C6.68 1 4 3.68 4 7c0 4.5 6 12 6 12s6-7.5 6-12c0-3.32-2.68-6-6-6z" fill="#FC3F1D"/>
+              <circle cx="10" cy="7" r="2.5" fill="white"/>
+            </svg>
+            <span>Яндекс Карты</span>
+            <span class="reviews__badge-score">5.0</span>
+          </a>
+        </div>
+
+        
+        <div class="reviews__leave-wrap">
+          <button class="reviews__leave-btn" id="leaveReviewBtn" type="button">Оставить отзыв</button>
+          <div class="reviews__dropdown" id="leaveReviewDropdown" role="menu">
+            <a href="https://yandex.ru/maps/?text=Автотранс%20Тольятти" target="_blank" rel="noopener noreferrer" role="menuitem">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M10 1C6.68 1 4 3.68 4 7c0 4.5 6 12 6 12s6-7.5 6-12c0-3.32-2.68-6-6-6z" fill="#EA4335"/><circle cx="10" cy="7" r="2.5" fill="white"/></svg>
+              Яндекс Карты
+            </a>
+            <a href="https://2gis.ru/tolyatti/search/Автотранс" target="_blank" rel="noopener noreferrer" role="menuitem">
+              <svg width="18" height="18" viewBox="0 0 22 22" fill="none"><rect width="22" height="22" rx="5" fill="#1FA85C"/><text x="4" y="15" font-size="10" font-weight="800" fill="white" font-family="sans-serif">2ГИС</text></svg>
+              2ГИС
+            </a>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="reviews__slider reveal" id="reviewsSlider">
+        <div class="reviews__track" id="reviewsTrack">
+          
+        <article class="review-card">
+          <div class="review-card__head">
+            <img src="assets/photos/avatar-alexey.jpg" alt="Алексей Петров" class="review-card__avatar" width="52" height="52" loading="lazy" decoding="async">
+            <div class="review-card__info">
+              <div class="review-card__name">Алексей Петров</div>
+              <div class="review-card__role">Директор ООО "СтройМаш"</div>
+            </div>
+          </div>
+          <p class="review-card__text">Работаем с Автотранс уже 3 года. За это время ни одной задержки, груз всегда приходит в целости. Менеджеры оперативно отвечают и решают любые вопросы. Настоятельно рекомендую!</p>
+          <div class="review-card__stars" aria-label="Оценка 5 из 5"><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span></div>
+        </article>
+        <article class="review-card">
+          <div class="review-card__head">
+            <img src="assets/photos/avatar-marina.jpg" alt="Марина Соколова" class="review-card__avatar" width="52" height="52" loading="lazy" decoding="async">
+            <div class="review-card__info">
+              <div class="review-card__name">Марина Соколова</div>
+              <div class="review-card__role">Логист ГК "Поволжье-Трейд"</div>
+            </div>
+          </div>
+          <p class="review-card__text">Отличная транспортная компания! Быстро согласовали маршрут, цена адекватная. Водители вежливые и пунктуальные. Будем сотрудничать и дальше без сомнений.</p>
+          <div class="review-card__stars" aria-label="Оценка 5 из 5"><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span></div>
+        </article>
+        <article class="review-card">
+          <div class="review-card__head">
+            <img src="assets/photos/avatar-dmitry.jpg" alt="Дмитрий Иванов" class="review-card__avatar" width="52" height="52" loading="lazy" decoding="async">
+            <div class="review-card__info">
+              <div class="review-card__name">Дмитрий Иванов</div>
+              <div class="review-card__role">ИП Иванов Д.А.</div>
+            </div>
+          </div>
+          <p class="review-card__text">Перевозили стройматериалы из Самары в Оренбург. Всё прошло без нареканий — груз доставлен в срок, упаковка не повреждена. Цена полностью соответствует качеству услуг.</p>
+          <div class="review-card__stars" aria-label="Оценка 5 из 5"><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span></div>
+        </article>
+        <article class="review-card">
+          <div class="review-card__head">
+            <img src="assets/photos/avatar-natalya.jpg" alt="Наталья Кузнецова" class="review-card__avatar" width="52" height="52" loading="lazy" decoding="async">
+            <div class="review-card__info">
+              <div class="review-card__name">Наталья Кузнецова</div>
+              <div class="review-card__role">Снабженец АО "Металлострой"</div>
+            </div>
+          </div>
+          <p class="review-card__text">Великолепное обслуживание, приветливый персонал, никакого времени ожидания. Рекомендую данную транспортную компанию всем, кто ценит своё время и деньги!</p>
+          <div class="review-card__stars" aria-label="Оценка 5 из 5"><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span></div>
+        </article>
+        <article class="review-card">
+          <div class="review-card__head">
+            <img src="assets/photos/avatar-sergey.jpg" alt="Сергей Морозов" class="review-card__avatar" width="52" height="52" loading="lazy" decoding="async">
+            <div class="review-card__info">
+              <div class="review-card__name">Сергей Морозов</div>
+              <div class="review-card__role">Руководитель ООО "ПромТех"</div>
+            </div>
+          </div>
+          <p class="review-card__text">Сотрудничаем с Автотранс уже полгода. Стабильно, надёжно, без сюрпризов. Особенно ценю, что всегда можно отследить, где находится груз. Отличная работа команды!</p>
+          <div class="review-card__stars" aria-label="Оценка 5 из 5"><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span></div>
+        </article>
+        <article class="review-card">
+          <div class="review-card__head">
+            <img src="assets/photos/avatar-elena.jpg" alt="Елена Захарова" class="review-card__avatar" width="52" height="52" loading="lazy" decoding="async">
+            <div class="review-card__info">
+              <div class="review-card__name">Елена Захарова</div>
+              <div class="review-card__role">Менеджер по логистике "АвтоДеталь"</div>
+            </div>
+          </div>
+          <p class="review-card__text">Перевозили партию автозапчастей. Всё закрепили и доставили в идеальном состоянии. Очень профессиональная команда, буду рекомендовать всем коллегам и партнёрам.</p>
+          <div class="review-card__stars" aria-label="Оценка 5 из 5"><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span><span class="review-card__star" aria-hidden="true">★</span></div>
+        </article>
+        </div>
+      </div>
+
+      
+      <div class="reviews__nav reveal">
+        <button class="reviews__arrow" id="reviewsPrev" aria-label="Предыдущий отзыв">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="reviews__dots" role="tablist" aria-label="Навигация отзывов">
+          <button class="reviews__dot  is-active" data-index="0" aria-label="Перейти к отзыву 1"></button><button class="reviews__dot" data-index="1" aria-label="Перейти к отзыву 2"></button><button class="reviews__dot" data-index="2" aria-label="Перейти к отзыву 3"></button><button class="reviews__dot" data-index="3" aria-label="Перейти к отзыву 4"></button><button class="reviews__dot" data-index="4" aria-label="Перейти к отзыву 5"></button><button class="reviews__dot" data-index="5" aria-label="Перейти к отзыву 6"></button>
+        </div>
+        <button class="reviews__arrow" id="reviewsNext" aria-label="Следующий отзыв">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <section class="cta-contact" aria-labelledby="ctaTitle">
+    <div class="cta-contact__inner reveal">
+
+      <h2 class="cta-contact__heading" id="ctaTitle">Остались<br>вопросы?</h2>
+
+      <div class="cta-contact__phone-block">
+        <a href="tel:88005553535" class="cta-contact__phone">8 (800) 555-35-35</a>
+        <p class="cta-contact__sub">Наши специалисты свяжутся с вами<br>в течение 15 минут</p>
+      </div>
+
+      <button class="cta-contact__btn" id="openModalCta" type="button">Оставить заявку</button>
+
+      
+      <svg class="cta-contact__icon" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/>
+        <path d="M21 16v2a4 4 0 0 1-4 4h-5"/>
+      </svg>
+
+    </div>
+  </section>
+
+  
+  <section class="news" aria-labelledby="newsTitle">
+    <div class="news__container">
+      <h2 class="news__title reveal" id="newsTitle">Новости</h2>
+      <div class="news__grid">
+        
+        <a href="news-detail.html" class="news-card reveal">
+          <div class="news-card__img-wrap">
+            <img src="assets/photos/warehouse.jpg" alt="Новый склад Автотранс в Тольятти" class="news-card__img" width="400" height="225" loading="lazy" decoding="async">
+          </div>
+          <div class="news-card__body">
+            <span class="news-card__date">28 апреля 2026</span>
+            <h3 class="news-card__heading">Открытие нового склада в Тольятти: площадь 5 000 м²</h3>
+            <span class="news-card__more">Подробнее</span>
+          </div>
+        </a>
+        <a href="news.html" class="news-card reveal">
+          <div class="news-card__img-wrap">
+            <img src="assets/photos/fleet-volvo.jpg" alt="Новые направления Автотранс" class="news-card__img" width="400" height="225" loading="lazy" decoding="async">
+          </div>
+          <div class="news-card__body">
+            <span class="news-card__date">15 апреля 2026</span>
+            <h3 class="news-card__heading">Новые направления: Екатеринбург и Пермь теперь в ежедневном расписании</h3>
+            <span class="news-card__more">Подробнее</span>
+          </div>
+        </a>
+        <a href="news.html" class="news-card reveal">
+          <div class="news-card__img-wrap">
+            <img src="assets/photos/fleet-scania.jpg" alt="Новые тягачи Scania R 560" class="news-card__img" width="400" height="225" loading="lazy" decoding="async">
+          </div>
+          <div class="news-card__body">
+            <span class="news-card__date">3 апреля 2026</span>
+            <h3 class="news-card__heading">Автопарк пополнился шестью новыми тягачами Scania R 560</h3>
+            <span class="news-card__more">Подробнее</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="faq" aria-labelledby="faqTitle">
+    <div class="faq__container">
+      <h2 class="faq__title reveal" id="faqTitle">Часто задаваемые вопросы</h2>
+      <div class="faq__list">
+        
+        <div class="faq__item reveal reveal-d1">
+          <button class="faq__question" aria-expanded="false">
+            <span>Как заказать перевозку?</span>
+            <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq__answer-wrap">
+            <div class="faq__answer"><p>Оформить заявку на перевозку груза можно несколькими способами:</p>
+<ol>
+  <li><strong>Через калькулятор на сайте</strong> — выберите город отправления и назначения, нажмите «Узнать стоимость» и заполните форму на странице расчёта.</li>
+  <li><strong>Через форму обратной связи</strong> — нажмите кнопку «Оставить заявку» на любой странице сайта, укажите контактные данные и параметры груза.</li>
+  <li><strong>По телефону</strong> — позвоните по номеру 8 (800) 555-35-35 (звонок бесплатный), наш менеджер поможет оформить заявку и рассчитает стоимость.</li>
+</ol>
+<p>После оформления заявки менеджер свяжется с вами в течение 15 минут и подтвердит детали доставки.</p></div>
+          </div>
+        </div>
+        <div class="faq__item reveal reveal-d2">
+          <button class="faq__question" aria-expanded="false">
+            <span>Какие документы нужны для перевозки?</span>
+            <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq__answer-wrap">
+            <div class="faq__answer"><p>Для организации перевозки потребуются следующие документы:</p>
+<ul>
+  <li><strong>Товарно-транспортная накладная (ТТН)</strong> — оформляется совместно с менеджером Автотранс.</li>
+  <li><strong>Договор на перевозку</strong> — заключается при первом обращении или разовой отправке.</li>
+  <li><strong>Документы на груз</strong> — счёт-фактура, накладная или иные товарные документы от грузоотправителя.</li>
+  <li><strong>Паспорт/доверенность</strong> — при сдаче или получении груза физическим лицом.</li>
+</ul>
+<p>При перевозке специфических грузов (опасные, крупногабаритные, скоропортящиеся) может потребоваться дополнительная разрешительная документация — уточните у менеджера.</p></div>
+          </div>
+        </div>
+        <div class="faq__item reveal reveal-d3">
+          <button class="faq__question" aria-expanded="false">
+            <span>Как отследить груз?</span>
+            <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq__answer-wrap">
+            <div class="faq__answer"><p>Автотранс предоставляет несколько способов отслеживания грузов:</p>
+<ul>
+  <li><strong>Личный кабинет на сайте</strong> — после регистрации вы видите актуальный статус всех своих отправлений в режиме реального времени.</li>
+  <li><strong>SMS и email-уведомления</strong> — автоматически отправляются при изменении статуса: принят, в пути, прибыл, выдан.</li>
+  <li><strong>Звонок менеджеру</strong> — позвоните по номеру 8 (800) 555-35-35, укажите номер накладной, и мы сообщим текущее местонахождение груза.</li>
+</ul>
+<p>Среднее время доставки по Самарской области — 1 рабочий день, по соседним регионам — от 1 до 3 рабочих дней в зависимости от направления.</p></div>
+          </div>
+        </div>
+        <div class="faq__item reveal reveal-d4">
+          <button class="faq__question" aria-expanded="false">
+            <span>Как мы работаем?</span>
+            <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq__answer-wrap">
+            <div class="faq__answer"><p>Процесс работы с Автотранс состоит из нескольких простых этапов:</p>
+<ol>
+  <li><strong>Заявка</strong> — вы оставляете заявку через сайт или по телефону, указываете параметры груза и маршрут.</li>
+  <li><strong>Расчёт и согласование</strong> — менеджер рассчитывает стоимость и согласовывает удобное время забора груза.</li>
+  <li><strong>Забор груза</strong> — наш водитель приезжает на склад отправителя, груз проверяется и принимается по накладной.</li>
+  <li><strong>Транспортировка</strong> — груз перевозится по оптимальному маршруту с соблюдением всех норм и температурных режимов (при необходимости).</li>
+  <li><strong>Доставка и выдача</strong> — груз доставляется получателю, подписываются документы о приёмке. Вы получаете уведомление о доставке.</li>
+</ol>
+<p>Все грузы застрахованы на весь период транспортировки. При возникновении нештатных ситуаций менеджер немедленно информирует клиента.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <footer class="footer" aria-label="Подвал сайта">
+  <div class="footer__container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="Автотранс — на главную">
+          <img src="assets/logo/autotrans-mark-light.png" alt="" class="footer__logo-icon" width="48" height="30">
+          <span class="footer__logo-name">АВТОТРАНС</span>
+        </a>
+        <p class="footer__desc">Транспортно-экспедиционная компания. Круглогодичная доставка грузов по Самарской области и регионам России с 2010 года.</p>
+      </div>
+      <div>
+        <p class="footer__col-title">Навигация</p>
+        <nav class="footer__links" aria-label="Навигация в подвале">
+          <a href="index.html" class="footer__link">Главная</a>
+          <a href="about.html" class="footer__link">О компании</a>
+          <a href="services.html" class="footer__link">Услуги</a>
+          <a href="calculator.html" class="footer__link">Калькулятор</a>
+          <a href="news.html" class="footer__link">Новости</a>
+          <a href="contacts.html" class="footer__link">Контакты</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer__col-title">Услуги</p>
+        <nav class="footer__links" aria-label="Услуги в подвале">
+          <a href="service-detail.html?s=avtodostavka" class="footer__link">Автодоставка</a>
+          <a href="service-detail.html?s=express" class="footer__link">Экспресс-доставка</a>
+          <a href="service-detail.html?s=door" class="footer__link">Доставка до двери</a>
+          <a href="service-detail.html?s=insurance" class="footer__link">Страхование груза</a>
+          <a href="service-detail.html?s=sborniy" class="footer__link">Сборные грузы</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer__col-title">Контакты</p>
+        <a href="tel:88005553535" class="footer__contact-item">
+          <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.56-.56a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          8 (800) 555-35-35
+        </a>
+        <a href="mailto:info@avtotrans.ru" class="footer__contact-item">
+          <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@avtotrans.ru
+        </a>
+        <span class="footer__contact-item">
+          <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          г. Тольятти, Ленинский проспект, 40
+        </span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copy">© 2010–2026 ООО «Автотранс». Все права защищены.</span>
+      <a href="privacy.html" class="footer__policy">Политика конфиденциальности</a>
+    </div>
+  </div>
+</footer>
+
+  
+  <div class="modal-overlay" id="requestModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal" id="modalBox">
+      <button class="modal__close" id="closeModal" aria-label="Закрыть окно">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M2 2L14 14M14 2L2 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      
+      <div id="modalFormWrap">
+        <h2 class="modal__title" id="modalTitle">Оставить заявку</h2>
+        <form class="modal__form" id="requestForm" novalidate>
+          <div class="modal__row">
+            <div class="modal__field">
+              <label for="req-name">Ваше имя</label>
+              <input type="text" id="req-name" name="name" placeholder="Иван Иванов" autocomplete="name">
+              
+            </div>
+            <div class="modal__field">
+              <label for="req-phone">Телефон *</label>
+              <input type="tel" id="req-phone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+            </div>
+          </div>
+          <div class="modal__row">
+            <div class="modal__field">
+              <label for="req-from">Откуда</label>
+              <input type="text" id="req-from" name="from" placeholder="Самара">
+            </div>
+            <div class="modal__field">
+              <label for="req-to">Куда</label>
+              <input type="text" id="req-to" name="to" placeholder="Тольятти">
+            </div>
+          </div>
+          <div class="modal__field">
+            <label for="req-cargo">Тип груза</label>
+            <input type="text" id="req-cargo" name="cargo" placeholder="Например: паллеты, оборудование, стройматериалы">
+          </div>
+          <div class="modal__field">
+            <label for="req-comment">Комментарий</label>
+            <textarea id="req-comment" name="comment" rows="3" placeholder="Дополнительные условия, сроки, объём..."></textarea>
+          </div>
+          <button type="submit" class="modal__submit">Отправить заявку</button>
+        </form>
+      </div>
+
+      
+      <div class="modal__success" id="modalSuccess" aria-live="polite">
+        <div class="modal__success-icon">✓</div>
+        <h3>Заявка отправлена!</h3>
+        <p>Мы свяжемся с вами в ближайшее время</p>
+      </div>
+    </div>
+  </div>
+
+  
+    <script src="script.js" defer></script>
+
+</body>
+</html>

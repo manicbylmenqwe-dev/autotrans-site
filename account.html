@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Личный кабинет Автотранс: трекинг груза, отправления, профиль клиента и история событий.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Автотранс — Личный кабинет</title>
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/logo/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+  <meta name="theme-color" content="#2A2F41">
+</head>
+<body class="account-page">
+  <header class="header" id="header">
+    <div class="header__container">
+      <a href="index.html" class="header__logo" aria-label="Автотранс — на главную">
+        <img src="assets/logo/autotrans-mark-light.png" alt="" class="header__logo-icon" width="52" height="32">
+        <div class="header__logo-text">
+          <span class="header__logo-name">АВТОТРАНС</span>
+          <span class="header__logo-slogan">Грузоперевозки</span>
+        </div>
+      </a>
+      <nav class="header__nav" aria-label="Основная навигация">
+        <ul class="header__nav-list">
+          <li><a href="index.html" class="header__nav-link">Главная</a></li>
+          <li><a href="about.html" class="header__nav-link">О компании</a></li>
+          <li><a href="services.html" class="header__nav-link">Услуги</a></li>
+          <li><a href="news.html" class="header__nav-link">Новости</a></li>
+          <li><a href="contacts.html" class="header__nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="account.html" class="header__btn-cabinet">Личный кабинет</a>
+        <a href="tel:88005553535" class="header__phone">8 (800) 555-35-35</a>
+      </div>
+      <button class="header__burger" id="headerBurger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="header__mobile-menu" id="mobileMenu" role="dialog" aria-label="Мобильное меню">
+      <nav aria-label="Мобильная навигация">
+        <ul class="header__nav-list">
+          <li><a href="index.html" class="header__nav-link">Главная</a></li>
+          <li><a href="about.html" class="header__nav-link">О компании</a></li>
+          <li><a href="services.html" class="header__nav-link">Услуги</a></li>
+          <li><a href="news.html" class="header__nav-link">Новости</a></li>
+          <li><a href="contacts.html" class="header__nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__mobile-bottom">
+        <a href="account.html" class="header__btn-cabinet">Личный кабинет</a>
+        <a href="tel:88005553535" class="header__phone">8 (800) 555-35-35</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="account-wrap">
+      <div class="account-shell">
+        <aside class="lk-card" aria-label="Профиль клиента">
+          <div class="lk-profile-top">
+            <div class="lk-avatar">АМ</div>
+            <div>
+              <div class="lk-name">Алексей Миронов</div>
+              <div class="lk-role">Клиент кабинета · Самара</div>
+            </div>
+          </div>
+          <p class="lk-muted">Подключены уведомления по SMS и e-mail. Последний вход: сегодня, 20:14.</p>
+          <div class="lk-stats">
+            <div class="lk-stat"><div class="lk-stat__value">12</div><div class="lk-stat__label">Всего отправок</div></div>
+            <div class="lk-stat"><div class="lk-stat__value">3</div><div class="lk-stat__label">Сейчас в пути</div></div>
+            <div class="lk-stat"><div class="lk-stat__value">97%</div><div class="lk-stat__label">Доставлено в срок</div></div>
+            <div class="lk-stat"><div class="lk-stat__value">5</div><div class="lk-stat__label">Шаблонов маршрута</div></div>
+          </div>
+        </aside>
+
+        <div class="account-main">
+          <section class="lk-banner">
+            <h2 class="lk-banner__title">Быстрый контроль перевозок без перехода по нескольким страницам</h2>
+            <p class="lk-banner__text">На этой странице собраны трекинг, заявки, отправления, профиль и история событий. Пользователь может решать основные задачи прямо из кабинета.</p>
+            <div class="lk-banner__actions">
+              <a class="lk-btn" href="#trackingSection">Проверить груз</a>
+              <a class="lk-btn-light" href="calculator.html">Открыть калькулятор</a>
+              <a class="lk-btn-light" href="#shipmentsSection">Мои отправления</a>
+            </div>
+          </section>
+
+          <div class="account-tabs" role="tablist" aria-label="Разделы кабинета">
+            <button class="lk-tab is-active" type="button" data-scroll-target="trackingSection">Трекинг</button>
+            <button class="lk-tab" type="button" data-scroll-target="shipmentsSection">Отправления</button>
+            <button class="lk-tab" type="button" data-scroll-target="profileSection">Профиль</button>
+            <button class="lk-tab" type="button" data-scroll-target="activitySection">История</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="account-grid">
+        <section class="lk-widget tracker" id="trackingSection">
+          <h2 class="lk-section-title">Проверка маршрута по трек-номеру</h2>
+          <p class="lk-track-meta">Введите трек-номер, чтобы сразу увидеть маршрут, текущую точку и последние обновления по отправлению.</p>
+          <form class="track-form" id="trackForm" novalidate>
+            <input class="track-input" id="trackInput" type="text" placeholder="Введите трек-номер" aria-label="Трек номер">
+            <button class="lk-btn" type="submit">Проверить</button>
+          </form>
+
+          <div class="tracking-result" id="trackingResult">
+            <div class="lk-status-card">
+              <div class="lk-status-row">
+                <div>
+                  <div class="lk-small">Отправление</div>
+                  <div class="lk-name" id="resultTrack">AT-20481-SMR</div>
+                </div>
+                <div class="lk-status-badge in-transit" id="resultBadge">В пути</div>
+              </div>
+              <div class="lk-track-grid">
+                <div class="lk-track-point">
+                  <div class="lk-track-point__label">Маршрут</div>
+                  <div class="lk-track-point__value" id="resultRoute">Самара → Казань</div>
+                </div>
+                <div class="lk-track-point">
+                  <div class="lk-track-point__label">Текущая точка</div>
+                  <div class="lk-track-point__value" id="resultPoint">Склад в Ульяновске</div>
+                </div>
+                <div class="lk-track-point">
+                  <div class="lk-track-point__label">Ожидаемая дата</div>
+                  <div class="lk-track-point__value" id="resultEta">14 ноября, до 18:00</div>
+                </div>
+              </div>
+              <div class="lk-timeline" id="trackingTimeline"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lk-widget quick">
+          <h2 class="lk-section-title">Быстрые действия</h2>
+          <p class="lk-track-meta">Основные действия собраны в одном блоке, чтобы пользователь быстрее переходил к частым операциям без поиска по сайту.</p>
+          <div class="quick-grid">
+            <article class="lk-action">
+              <h3 class="lk-action__title">Повторить прошлый маршрут</h3>
+              <p class="lk-action__text">Самара → Оренбург, 1.8 т, доставка до двери.</p>
+              <a class="lk-btn-light" href="calculator.html">Открыть в калькуляторе</a>
+            </article>
+            <article class="lk-action">
+              <h3 class="lk-action__title">Новая заявка</h3>
+              <p class="lk-action__text">Подготовьте новый расчёт с заранее заполненными данными клиента.</p>
+              <a class="lk-btn-light" href="calculator.html">Оформить расчёт</a>
+            </article>
+            <article class="lk-action">
+              <h3 class="lk-action__title">Связь с менеджером</h3>
+              <p class="lk-action__text">Получите консультацию по срокам, условиям отгрузки и документам.</p>
+              <a class="lk-btn-light" href="tel:88005553535">Позвонить</a>
+            </article>
+            <article class="lk-action">
+              <h3 class="lk-action__title">Сохранённые получатели</h3>
+              <p class="lk-action__text">В кабинете сохранены 8 карточек контрагентов для быстрых повторных отправок.</p>
+              <button class="lk-btn-light" type="button">Открыть список</button>
+            </article>
+          </div>
+        </section>
+
+        <section class="lk-table-card" id="shipmentsSection">
+          <h2 class="lk-section-title">Мои отправления</h2>
+          <p class="lk-track-meta">Здесь собраны активные, завершённые и готовящиеся отправления с быстрым переходом к подробному трекингу.</p>
+          <div class="lk-filters" role="tablist" aria-label="Фильтры отправлений">
+            <button class="lk-filter is-active" type="button" data-filter="all">Все</button>
+            <button class="lk-filter" type="button" data-filter="in-transit">В пути</button>
+            <button class="lk-filter" type="button" data-filter="delivered">Доставлены</button>
+            <button class="lk-filter" type="button" data-filter="processing">Готовятся</button>
+          </div>
+          <div class="table-responsive shipments-list is-visible" id="shipmentsList">
+            <table class="lk-table">
+              <thead>
+                <tr>
+                  <th>Трек-номер</th>
+                  <th>Маршрут</th>
+                  <th>Дата</th>
+                  <th>Груз</th>
+                  <th>Статус</th>
+                  <th>Действие</th>
+                </tr>
+              </thead>
+              <tbody id="shipmentsBody">
+                <tr data-status="in-transit">
+                  <td>AT-20481-SMR</td>
+                  <td>Самара → Казань</td>
+                  <td>12.11.2026</td>
+                  <td>Запчасти, 1.2 т</td>
+                  <td><span class="lk-chip in-transit">В пути</span></td>
+                  <td><button class="lk-btn-light" type="button" data-track-open="AT-20481-SMR">Открыть</button></td>
+                </tr>
+                <tr data-status="processing">
+                  <td>AT-21011-TRK</td>
+                  <td>Тольятти → Уфа</td>
+                  <td>13.11.2026</td>
+                  <td>Оборудование, 3.6 т</td>
+                  <td><span class="lk-chip processing">Готовится</span></td>
+                  <td><button class="lk-btn-light" type="button" data-track-open="AT-21011-TRK">Открыть</button></td>
+                </tr>
+                <tr data-status="delivered">
+                  <td>AT-17003-DEL</td>
+                  <td>Самара → Оренбург</td>
+                  <td>06.11.2026</td>
+                  <td>Стройматериалы, 5.4 т</td>
+                  <td><span class="lk-chip delivered">Доставлен</span></td>
+                  <td><button class="lk-btn-light" type="button" data-track-open="AT-17003-DEL">Открыть</button></td>
+                </tr>
+                <tr data-status="in-transit">
+                  <td>AT-19874-KZN</td>
+                  <td>Казань → Самара</td>
+                  <td>11.11.2026</td>
+                  <td>Паллеты, 0.9 т</td>
+                  <td><span class="lk-chip in-transit">В пути</span></td>
+                  <td><button class="lk-btn-light" type="button" data-track-open="AT-19874-KZN">Открыть</button></td>
+                </tr>
+                <tr data-status="processing">
+                  <td>AT-22117-ULN</td>
+                  <td>Ульяновск → Самара</td>
+                  <td>14.11.2026</td>
+                  <td>Архив, 0.4 т</td>
+                  <td><span class="lk-chip processing">Готовится</span></td>
+                  <td><button class="lk-btn-light" type="button" data-track-open="AT-22117-ULN">Открыть</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="empty-state" id="shipmentsEmpty">По выбранному фильтру пока нет отправлений.</div>
+        </section>
+
+        <section class="lk-profile" id="profileSection">
+          <h2 class="lk-section-title">Профиль клиента</h2>
+          <p class="lk-track-meta">Основные данные клиента собраны в компактных карточках для быстрых повторных заявок.</p>
+          <div class="profile-grid">
+            <article class="profile-item"><div class="profile-item__label">Контакт</div><div class="profile-item__value">Алексей Миронов</div></article>
+            <article class="profile-item"><div class="profile-item__label">Телефон</div><div class="profile-item__value">+7 (927) 000-45-18</div></article>
+            <article class="profile-item"><div class="profile-item__label">E-mail</div><div class="profile-item__value">client@avtotrans.ru</div></article>
+            <article class="profile-item"><div class="profile-item__label">Тип клиента</div><div class="profile-item__value">Юридическое лицо</div></article>
+            <article class="profile-item"><div class="profile-item__label">Компания</div><div class="profile-item__value">ООО «Мир снабжения»</div></article>
+            <article class="profile-item"><div class="profile-item__label">Менеджер</div><div class="profile-item__value">Екатерина Волкова</div></article>
+          </div>
+        </section>
+
+        <section class="lk-activity" id="activitySection">
+          <h2 class="lk-section-title">История событий</h2>
+          <p class="lk-track-meta">Лента показывает недавние обновления по перевозкам и изменения в кабинете клиента.</p>
+          <div class="activity-list">
+            <article class="lk-activity-item">
+              <div class="lk-activity-icon">01</div>
+              <div>
+                <div class="lk-activity-title">Груз AT-20481-SMR прошёл сортировку</div>
+                <div class="lk-activity-text">Маршрут Самара → Казань, терминал в Ульяновске.</div>
+              </div>
+              <div class="lk-activity-time">Сегодня, 18:40</div>
+            </article>
+            <article class="lk-activity-item">
+              <div class="lk-activity-icon">02</div>
+              <div>
+                <div class="lk-activity-title">Создан черновик новой заявки</div>
+                <div class="lk-activity-text">Тольятти → Уфа, оборудование 3.6 т.</div>
+              </div>
+              <div class="lk-activity-time">Сегодня, 14:10</div>
+            </article>
+            <article class="lk-activity-item">
+              <div class="lk-activity-icon">03</div>
+              <div>
+                <div class="lk-activity-title">Отправление AT-17003-DEL доставлено получателю</div>
+                <div class="lk-activity-text">Подписан акт приёмки, уведомление отправлено на e-mail.</div>
+              </div>
+              <div class="lk-activity-time">6 ноября, 12:32</div>
+            </article>
+            <article class="lk-activity-item">
+              <div class="lk-activity-icon">04</div>
+              <div>
+                <div class="lk-activity-title">Обновлены реквизиты компании</div>
+                <div class="lk-activity-text">Новый контакт для уведомлений добавлен в профиль.</div>
+              </div>
+              <div class="lk-activity-time">5 ноября, 09:05</div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" aria-label="Подвал сайта">
+  <div class="footer__container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="Автотранс — на главную">
+          <img src="assets/logo/autotrans-mark-light.png" alt="" class="footer__logo-icon" width="48" height="30">
+          <span class="footer__logo-name">АВТОТРАНС</span>
+        </a>
+        <p class="footer__desc">Транспортно-экспедиционная компания. Круглогодичная доставка грузов по Самарской области и регионам России с 2010 года.</p>
+      </div>
+      <div>
+        <p class="footer__col-title">Навигация</p>
+        <nav class="footer__links" aria-label="Навигация в подвале">
+          <a href="index.html" class="footer__link">Главная</a>
+          <a href="about.html" class="footer__link">О компании</a>
+          <a href="services.html" class="footer__link">Услуги</a>
+          <a href="calculator.html" class="footer__link">Калькулятор</a>
+          <a href="news.html" class="footer__link">Новости</a>
+          <a href="contacts.html" class="footer__link">Контакты</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer__col-title">Услуги</p>
+        <nav class="footer__links" aria-label="Услуги в подвале">
+          <a href="service-detail.html?s=avtodostavka" class="footer__link">Автодоставка</a>
+          <a href="service-detail.html?s=express" class="footer__link">Экспресс-доставка</a>
+          <a href="service-detail.html?s=door" class="footer__link">Доставка до двери</a>
+          <a href="service-detail.html?s=insurance" class="footer__link">Страхование груза</a>
+          <a href="service-detail.html?s=sborniy" class="footer__link">Сборные грузы</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer__col-title">Контакты</p>
+        <a href="tel:88005553535" class="footer__contact-item">
+          <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.56-.56a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          8 (800) 555-35-35
+        </a>
+        <a href="mailto:info@avtotrans.ru" class="footer__contact-item">
+          <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@avtotrans.ru
+        </a>
+        <span class="footer__contact-item">
+          <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          г. Тольятти, Ленинский проспект, 40
+        </span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copy">© 2010–2026 ООО «Автотранс». Все права защищены.</span>
+      <a href="privacy.html" class="footer__policy">Политика конфиденциальности</a>
+    </div>
+  </div>
+</footer>
+
+  
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      const trackDatabase = {
+        'AT-20481-SMR': {
+          badgeClass: 'in-transit',
+          status: 'В пути',
+          route: 'Самара → Казань',
+          point: 'Склад в Ульяновске',
+          eta: '14 ноября, до 18:00',
+          steps: [
+            ['Груз принят на терминале в Самаре', '12 ноября · 08:25'],
+            ['Отправлен магистральным рейсом', '12 ноября · 11:10'],
+            ['Прибыл на промежуточный терминал', '12 ноября · 18:40'],
+            ['Запланирована доставка получателю', '14 ноября · до 18:00']
+          ]
+        },
+        'AT-19874-KZN': {
+          badgeClass: 'in-transit',
+          status: 'В пути',
+          route: 'Казань → Самара',
+          point: 'Трасса М7, рейс подтверждён',
+          eta: '12 ноября, до 14:00',
+          steps: [
+            ['Груз оформлен на терминале в Казани', '11 ноября · 07:50'],
+            ['Передан водителю', '11 ноября · 10:20'],
+            ['Следует по маршруту', '11 ноября · 19:10'],
+            ['Ожидается прибытие в Самару', '12 ноября · до 14:00']
+          ]
+        },
+        'AT-17003-DEL': {
+          badgeClass: 'delivered',
+          status: 'Доставлен',
+          route: 'Самара → Оренбург',
+          point: 'Получатель подтвердил приёмку',
+          eta: 'Доставлено 6 ноября, 12:32',
+          steps: [
+            ['Груз принят на складе', '5 ноября · 09:15'],
+            ['Машина вышла на маршрут', '5 ноября · 14:00'],
+            ['Прибыл в город назначения', '6 ноября · 09:50'],
+            ['Передан получателю', '6 ноября · 12:32']
+          ]
+        },
+        'AT-21011-TRK': {
+          badgeClass: 'processing',
+          status: 'Готовится к отправке',
+          route: 'Тольятти → Уфа',
+          point: 'Ожидание выезда со склада',
+          eta: '13 ноября, после 10:00',
+          steps: [
+            ['Заявка подтверждена менеджером', '12 ноября · 16:05'],
+            ['Документы переданы в обработку', '12 ноября · 16:40'],
+            ['Назначен автомобиль', '12 ноября · 18:20'],
+            ['Плановый выезд', '13 ноября · после 10:00']
+          ]
+        },
+        'AT-22117-ULN': {
+          badgeClass: 'processing',
+          status: 'Готовится к отправке',
+          route: 'Ульяновск → Самара',
+          point: 'Комплектация на складе',
+          eta: '14 ноября, после 09:00',
+          steps: [
+            ['Создана заявка', '13 ноября · 08:10'],
+            ['Подтверждена упаковка', '13 ноября · 10:25'],
+            ['Назначен слот погрузки', '13 ноября · 13:15'],
+            ['Ожидаемый выезд', '14 ноября · после 09:00']
+          ]
+        }
+      };
+
+      const trackForm = document.getElementById('trackForm');
+      const trackInput = document.getElementById('trackInput');
+      const result = document.getElementById('trackingResult');
+      const resultTrack = document.getElementById('resultTrack');
+      const resultBadge = document.getElementById('resultBadge');
+      const resultRoute = document.getElementById('resultRoute');
+      const resultPoint = document.getElementById('resultPoint');
+      const resultEta = document.getElementById('resultEta');
+      const timeline = document.getElementById('trackingTimeline');
+
+      function renderTrack(trackNumber) {
+        const data = trackDatabase[trackNumber];
+        if (!data) {
+          result.classList.add('is-visible');
+          resultTrack.textContent = trackNumber || 'Не найдено';
+          resultBadge.className = 'lk-status-badge processing';
+          resultBadge.textContent = 'Номер не найден';
+          resultRoute.textContent = 'Проверьте формат трек-номера';
+          resultPoint.textContent = 'Например: AT-20481-SMR';
+          resultEta.textContent = 'Уточните данные у менеджера';
+          timeline.innerHTML = '<div class="lk-step"><div class="lk-step__dot">!</div><div><div class="lk-step__title">Не удалось найти отправление</div><div class="lk-step__meta">Проверьте введённый номер или свяжитесь с менеджером по телефону 8 (800) 555-35-35.</div></div></div>';
+          return;
+        }
+        result.classList.add('is-visible');
+        resultTrack.textContent = trackNumber;
+        resultBadge.className = 'lk-status-badge ' + data.badgeClass;
+        resultBadge.textContent = data.status;
+        resultRoute.textContent = data.route;
+        resultPoint.textContent = data.point;
+        resultEta.textContent = data.eta;
+        timeline.innerHTML = data.steps.map((step, index) => `
+          <div class="lk-step">
+            <div class="lk-step__dot">${index + 1}</div>
+            <div>
+              <div class="lk-step__title">${step[0]}</div>
+              <div class="lk-step__meta">${step[1]}</div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      if (trackForm) {
+        trackForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          renderTrack((trackInput.value || '').trim().toUpperCase());
+        });
+      }
+      renderTrack('AT-20481-SMR');
+
+      document.querySelectorAll('[data-track-open]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const track = btn.getAttribute('data-track-open');
+          trackInput.value = track;
+          renderTrack(track);
+          document.getElementById('trackingSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+
+      const filters = Array.from(document.querySelectorAll('[data-filter]'));
+      const rows = Array.from(document.querySelectorAll('#shipmentsBody tr'));
+      const empty = document.getElementById('shipmentsEmpty');
+      function applyFilter(name) {
+        let visibleCount = 0;
+        filters.forEach(btn => btn.classList.toggle('is-active', btn.dataset.filter === name));
+        rows.forEach(row => {
+          const visible = name === 'all' || row.dataset.status === name;
+          row.style.display = visible ? '' : 'none';
+          if (visible) visibleCount += 1;
+        });
+        empty.classList.toggle('is-visible', visibleCount === 0);
+      }
+      filters.forEach(btn => btn.addEventListener('click', () => applyFilter(btn.dataset.filter)));
+
+      document.querySelectorAll('[data-scroll-target]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('[data-scroll-target]').forEach(b => b.classList.remove('is-active'));
+          btn.classList.add('is-active');
+          const target = document.getElementById(btn.dataset.scrollTarget);
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
