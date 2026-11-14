@@ -878,8 +878,8 @@
 
     .reviews__slider {
       overflow: hidden;
-      margin: 0 calc(-1 * var(--space-6));
-      padding: var(--space-2) var(--space-6) var(--space-4);
+      margin: 0;
+      padding: var(--space-2) 0 var(--space-4);
     }
     .reviews__track {
       display: flex;
@@ -1069,7 +1069,7 @@
     }
     @media (max-width: 768px) {
       .reviews__container { padding: 0 var(--space-4); }
-      .reviews__slider { margin: 0 calc(-1 * var(--space-4)); padding: var(--space-2) var(--space-4) var(--space-4); }
+      .reviews__slider { margin: 0; padding: var(--space-2) 0 var(--space-4); }
       .cta-contact { padding: 20px; }
       .cta-contact__inner {
         flex-direction: column;

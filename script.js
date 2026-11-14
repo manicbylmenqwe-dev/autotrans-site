@@ -199,7 +199,7 @@ if (form) {
   function calcLayout() {
     visible = getVisible();
     gap = window.innerWidth < 540 ? 12 : 20;
-    const containerW = slider.offsetWidth;
+    const containerW = slider.clientWidth;
     cardW = (containerW - gap * (visible - 1)) / visible;
     track.querySelectorAll('.review-card').forEach(c => {
       c.style.minWidth = cardW + 'px';
